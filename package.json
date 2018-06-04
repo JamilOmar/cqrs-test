@@ -1,0 +1,39 @@
+{
+  "name": "robots-cqrs",
+  "namespace": "CQRS",
+  "main": "./index.js",
+  "version": "v0.18.601",
+  "description": "CQRS test",
+  "private": true,
+  "contributors": "https://github.com/jamilomar/robots-cqrs/graphs/contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamilomar/robots-cqrs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jamilomar/robots-cqrs/issues"
+  },
+  "scripts": {
+    "pretest": "tsc",
+    "postinstall": "tsc",
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "lint:fix": "tslint -p tsconfig.json -c tslint.json --fix"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.14.77",
+    "@types/node": "^8.0.47",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "@labshare/services": "^2.0.0",
+    "@labshare/services-bus": "https://github.com/LabShare/services-bus",
+    "@labshare/services-auth": "^1.19.0",
+    "@labshare/services-cache": "https://github.com/LabShare/services-cache",
+    "app-root-dir": "^1.0.2",
+    "eventemitter2": "^4.1.2",
+    "lodash": "^4.14.77",
+    "moment": "^2.19.1"
+  }
+}
