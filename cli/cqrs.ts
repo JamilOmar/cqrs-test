@@ -1,4 +1,5 @@
 import * as _ from 'lodash';
+import * as Util from 'util';
 import * as CQRS from '@labshare/services-bus';
 const { Services } = require('@labshare/services');
 const logger = global.LabShare.Logger;
@@ -52,7 +53,7 @@ export async function reportAll() {
     await process();
     logger.info('Handlers loaded');
     let data = await CQRS.ServiceLocator.Process.Instance.query(new CQRS.Models.Entities.ReportCommand('Report', 'result'));
-    console.log(data);
+    console.log(Util.inspect( data,true,null));
 
     
 }

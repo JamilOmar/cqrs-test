@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("lodash");
+const Util = require("util");
 const CQRS = require("@labshare/services-bus");
 const { Services } = require('@labshare/services');
 const logger = global.LabShare.Logger;
@@ -69,7 +70,7 @@ function reportAll() {
         yield process();
         logger.info('Handlers loaded');
         let data = yield CQRS.ServiceLocator.Process.Instance.query(new CQRS.Models.Entities.ReportCommand('Report', 'result'));
-        console.log(data);
+        console.log(Util.inspect(data, true, null));
     });
 }
 exports.reportAll = reportAll;
